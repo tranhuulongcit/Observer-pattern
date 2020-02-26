@@ -19,7 +19,13 @@ public class Main {
         hung.subcribe(phongDaoTao);
 
         phongDaoTao.notifyAll("Thông báo nghỉ do dịch COVID-19.");
+        System.out.println("---------------------------------");
         phongDaoTao.notifyTo(hung, "Thông báo thay đổi lịch dạy ngày 20/04/2019.");
+        System.out.println("---------------------------------");
+        hung.dispose(phongDaoTao);
+        phongDaoTao.notifyAll("Thông báo lịch học phần.");
+
+
     }
 
 
