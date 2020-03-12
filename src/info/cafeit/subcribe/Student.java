@@ -22,14 +22,4 @@ public class Student implements Observer {
     public void update(String message) {
         System.out.println(this.getName() + ": " + message);
     }
-
-    @Override
-    public void subcribe(Subject subject) {
-        subject.attach(this);
-    }
-
-    @Override
-    public void dispose(Subject subject) {
-        subject.detach(this);
-    }
 }

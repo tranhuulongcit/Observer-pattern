@@ -1,7 +1,5 @@
 package info.cafeit.subcribe;
 
-import info.cafeit.publish.Subject;
-
 public class Teacher implements Observer {
 
     private String name;
@@ -23,13 +21,4 @@ public class Teacher implements Observer {
         System.out.println(this.getName() + ": " + message);
     }
 
-    @Override
-    public void subcribe(Subject subject) {
-        subject.attach(this);
-    }
-
-    @Override
-    public void dispose(Subject subject) {
-        subject.detach(this);
-    }
 }
