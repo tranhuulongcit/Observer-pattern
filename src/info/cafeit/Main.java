@@ -10,19 +10,19 @@ public class Main {
 
     public static void main(String[] args) {
         AcademicAffairs phongDaoTao = new AcademicAffairs();
-        Student nam = new Student("Nguyen Van Nam");
-        Student binh = new Student("Truong Gia Binh");
-        Student quoc = new Student("Le Cong Quoc");
-        Teacher hung = new Teacher("Le Hung");
+        Student nam = new Student("Nguyễn Văn Nam");
+        Student huy = new Student("Trần Ngọc Huy");
+        Student hung = new Student("Lê Văn Hùng");
+        Teacher thai = new Teacher("Lê Minh Thái");
 
         subcribe(phongDaoTao, nam);
-        subcribe(phongDaoTao, binh);
-        subcribe(phongDaoTao, quoc);
+        subcribe(phongDaoTao, huy);
         subcribe(phongDaoTao, hung);
+        subcribe(phongDaoTao, thai);
 
         phongDaoTao.notifyAll("Thông báo nghỉ do dịch COVID-19.");
         System.out.println("---------------------------------");
-        phongDaoTao.notifyTo(hung, "Thông báo thay đổi lịch dạy ngày 20/04/2019.");
+        phongDaoTao.notifyTo(thai, "Thông báo thay đổi lịch dạy ngày 20/04/2019.");
         System.out.println("---------------------------------");
         dispose(phongDaoTao, hung);
         phongDaoTao.notifyAll("Thông báo lịch học phần.");
